@@ -4,6 +4,8 @@
 var FixedDataTable = require('fixed-data-table')
 var React = require('react');
 
+import {Table, Column, Cell} from 'fixed-data-table';
+
 const {Table, Column, Cell} = FixedDataTable;
 
 const FirstNameCell = ({rowIndex,data, col}) => (

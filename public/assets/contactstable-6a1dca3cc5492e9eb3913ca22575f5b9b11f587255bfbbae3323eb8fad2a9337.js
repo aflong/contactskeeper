@@ -6,36 +6,28 @@ var React = require('react');
 
 const {Table, Column, Cell} = FixedDataTable;
 
-const FirstNameCell = ({rowIndex,data, col}) => (
+const FirstNameCell = ({rowIndex,data, col, ...props}) => (
 	<Cell {...props}>
 		{data.getObjectAt(rowIndex)[col]}
 	</cell>
 );
 
 
-const LastNameCell = ({rowIndex, data, col}) => (
+const LastNameCell = ({rowIndex, data, col, ...props}) => (
 	<cell {...props}>
 		{data.getObjectAt(rowIndex)[col]}
 	</cell>
 );
 
 
-const DateOfBirthCell = ({rowIndex, data, col}) => (
+const DateOfBirthCell = ({rowIndex, data, col, ...props}) => (
 	<cell {...props}>
 		{data.getObjectAt(rowIndex)[col]}
 	</cell>
 );
 
 
-const PhoneCell = ({rowIndex, data, col}) => (
-	<cell {...props}>
-		{data.getObjectAt(rowIndex)[col]}
-	</cell>
-);
-
-
-
-const EmailCell = ({rowIndex, data, col}) => (
+const PhoneCell = ({rowIndex, data, col, ...props}) => (
 	<cell {...props}>
 		{data.getObjectAt(rowIndex)[col]}
 	</cell>
@@ -43,7 +35,15 @@ const EmailCell = ({rowIndex, data, col}) => (
 
 
 
-const NotesCell = ({rowIndex, data, col}) => (
+const EmailCell = ({rowIndex, data, col, ...props}) => (
+	<cell {...props}>
+		{data.getObjectAt(rowIndex)[col]}
+	</cell>
+);
+
+
+
+const NotesCell = ({rowIndex, data, col, ...props}) => (
 	<cell {...props}>
 		{data.getObjectAt(rowIndex)[col]}
 	</cell>
@@ -98,3 +98,4 @@ render() {
 		);
 	}
 }
+;
