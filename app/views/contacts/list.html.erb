@@ -1,0 +1,22 @@
+<style>
+	.title {
+		background-color: #F58025;
+		color: white;
+		border-bottom: 30px solid #EFEFEF;
+		border-top: 30px solid #F58025;
+	}
+
+</style>
+
+<h1 class="title">Contacts Keeper</h1>
+
+<% if @contacts.blank? %>
+<p> No contacts in the keeper</p>
+<% else %>
+<ul id = "contacts">
+	<% @contacts.each do |c| %>
+	<li> <%= link_to c.name, {action  => 'show', :id => c.id} -%></li>
+	<% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add new Contact", {:action => 'new' }%> </p>
